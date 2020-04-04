@@ -2,7 +2,9 @@ body{
   background: #4d639f;
 }
 
+
 .container{
+  min-height:100vh;
   text-align: center;
   padding:20px 0;
 }
@@ -32,6 +34,7 @@ input{
   margin: 0 auto;
   width: 400px;
   background:rgb(196, 196, 247);
+  border: 1px solid  #4d639f;
 }
 
 .list span{
@@ -50,4 +53,5 @@ i{
 i:hover{
   cursor: pointer;
 }
+
 
