@@ -43,7 +43,7 @@ addList.addEventListener("click", function(e) {
   }
 });
 
-//------------------- インクリメンタルサーチ↓↓-----------------------------
+//------------------- インクリメンタルサーチ(未実装)↓↓-----------------------------
 let serch = document.querySelector('.serch_form');
 let keyword = document.querySelector('#keyword');
 let list = document.querySelector('list');
