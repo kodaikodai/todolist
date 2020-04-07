@@ -44,26 +44,18 @@ addList.addEventListener("click", function(e) {
 });
 
 //------------------- サーチ機能(未実装)↓↓-----------------------------
-let search = document.querySelector('#keyword');
+// let search = document.querySelector('#keyword');
 
-const filterTasks = (term) =>{
-  Array.from(list.children)
-      .filter((term)=>{
-        return !todo.textContent.toLowerCase().includes(term);
-      )};
-      .forEach((todo)=>{
-        todo.classList.add('filtered');
-      });
-  Array.from(list.chidren)
-      .filter((term)=>{
-      return todo.textContent.toLowerCase().includes(term);
-      )};
-      .forEach((todo)=>{
-      todo.classList.remove('filtered');
-      });
-}
+// const filterTasks = (term) =>{
+//   Array.from(addList.children)
+//       .filter((term)=> !todo.textContent.toLowerCase().includes(term))
+//       .forEach((todo)=>todo.classList.add('filtered'));
+//   Array.from(addList.chidren)
+//       .filter((term)=>todo.textContent.toLowerCase().includes(term))
+//       .forEach((todo)=>todo.classList.remove('filtered'));
+// };
 
-search.addEventListener('keyup',function(){
-  const term = search.value.trim().toLowerCase();
-  filterTasks(term);
-};
+// search.addEventListener('keyup',function(){
+//   const term = search.value.trim().toLowerCase();
+//   filterTasks(term);
+// });
