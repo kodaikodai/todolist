@@ -43,19 +43,27 @@ addList.addEventListener("click", function(e) {
   }
 });
 
-//------------------- インクリメンタルサーチ(未実装)↓↓-----------------------------
-let serch = document.querySelector('.serch_form');
-let keyword = document.querySelector('#keyword');
-let list = document.querySelector('list');
-let taskText = document.querySelector('#task_text')
+//------------------- サーチ機能(未実装)↓↓-----------------------------
+let search = document.querySelector('#keyword');
 
-serch.addEventListener('keyup',function(){
-  let inputWord = keyword.value;
-  // addList.innerHTML='';
-  console.log(list);
-  // for(var i = 0;list.length; i += 1){
-  //   console.log(list[0].textContent);
-  // }
-  
-  // addList.textContent.forEach(element => console.log(element));
-});
+const filterTasks = (term) =>{
+  Array.from(list.children)
+      .filter((term)=>{
+        return !todo.textContent.toLowerCase().includes(term);
+      )};
+      .forEach((todo)=>{
+        todo.classList.add('filtered');
+      });
+  Array.from(list.chidren)
+      .filter((term)=>{
+      return todo.textContent.toLowerCase().includes(term);
+      )};
+      .forEach((todo)=>{
+      todo.classList.remove('filtered');
+      });
+}
+
+search.addEventListener('keyup',function(){
+  const term = search.value.trim().toLowerCase();
+  filterTasks(term);
+};

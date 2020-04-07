@@ -55,4 +55,6 @@ i:hover{
   cursor: pointer;
 }
 
-
+.filtered{
+  display:none;
+}
